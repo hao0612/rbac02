@@ -9,7 +9,7 @@
         $(function () {
             $(".btn_reload").click(function () {
                 $.get('/permission/reload.do', function (data) {//jsonresult
-                    if (data.success()) {//加载成功
+                    if (data.success) {//加载成功
                         window.location.reload();//重新加载当前页面
                     } else {
                         alert(data.msg);//错误提示
